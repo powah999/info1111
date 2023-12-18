@@ -1,0 +1,134 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.parallax .content {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+}
+
+.parallax h1 {
+  font-size: 48px;
+}
+
+.parallax1 {
+  background-image: url('1.jpg');
+}
+
+.parallax2 {
+  background-image: url('back2.jpeg');
+}
+
+.parallax3 {
+  background-image: url('3.jpg');
+}
+
+.section {
+  background-color: #f5f5f5;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-align: center;
+  position: relative;
+
+}
+
+.section .content {
+  padding: 40px;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* paragraph */
+.section p {
+  font-size: 18px;
+  max-width: 600px; /* Adjust the maximum width as per your preference */
+  margin: 0 auto; /* Center the paragraphs */
+  text-align: justify; /* Justify the text */
+  line-height: 1.5; /* Adjust the line height as needed */
+}
+
+.survey-link {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.survey-link:hover {
+  opacity: 0.7;
+}
+
+.survey-link:active {
+  opacity: 0.5;
+}
+
+.image-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.image-container img {
+  max-width: 25%;
+  height: auto;
+}
+
+
+.video-container {
+  position: relative;
+  max-width: 800px; /* Set the maximum width of the video */
+  margin: 0 auto; /* Center the video horizontally */
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 aspect ratio (9 divided by 16 equals 0.5625 or 56.25%) */
+  display: flex;
+  justify-content: center;
+
+}
+
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.temp{
+  margin-left: -64px;
+}
+
+.desc{
+  font-family: Arial;
+  font-size: 16px;
+
+}
+

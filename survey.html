@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Inquiry Page</title>
+	<link rel="stylesheet" href="surveystyles.css">
+</head>
+<body>
+	<!--Form-->
+	<form id="form" novalidate onsubmit="submitForm(event)">
+
+		<!--Details-->
+		<div class="form-control">
+			<label for="name" id="label-name">Name</label>
+			<input type="text" id="name" placeholder="Enter your name" required>
+			<div class="invalid-feedback">Please enter your name.</div>
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email">Email</label>
+			<input type="email" id="email" placeholder="Enter your email" required>
+			<div class="invalid-feedback">Please enter a valid email address.</div>
+		</div>
+
+		<div class="form-control">
+			<label for="comment">Ask an inquiry</label>
+			<textarea name="comment" id="comment" placeholder="Enter your comment here" required></textarea>
+			<div class="invalid-feedback">Please enter your inquiry.</div>
+		</div>
+
+		<button type="submit" value="submit">Submit</button>
+	</form>
+
+	<!--Message-->
+	<div id="success-message" class="hidden">
+		Successfully submitted the form! Redirecting back to <a href="parallax_website.html">main</a>...
+	</div>
+
+	<script>
+		function submitForm(event) {
+			// Prevent the default form submission
+			event.preventDefault();
+
+			// Validate the form
+			var form = document.getElementById('form');
+			if (form.checkValidity()) {
+				// Hide the form
+				form.style.display = 'none';
+
+				// Show the success message
+				var successMessage = document.getElementById('success-message');
+				successMessage.style.display = 'block';
+
+				// Redirect after a delay (adjust the timeout value as needed)
+				setTimeout(function() {
+					window.location.href = 'parallax_website.html';
+				}, 1000); // Redirect after 3 seconds (adjust as needed)
+			} else {
+				// If the form is not valid, submit the form to display validation messages
+				form.submit();
+			}
+		}
+	</script>
+</body>
+</html>
